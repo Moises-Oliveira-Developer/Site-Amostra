@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Produto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Detalhes do Produto</h1>
+  </header>
+
+  <!-- Detalhes do Produto -->
+  <div id="product-details">
+    <img class="prod" id="product-image" src="" alt="Imagem do Produto">
+    <h3 class="dtl-title" id="product-title"></h3>
+    <p class="dtl-desc" id="product-description"></p>
+    <a id="whatsapp-link" target="_blank" class="buy-button">Comprar via WhatsApp</a>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Função para obter o valor do parâmetro 'id' da URL
+    function getProductIdFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('id');
+    }
+
+    // Função para exibir os detalhes do produto na página
+    function showProductDetails() {
+      const productId = getProductIdFromURL();
+      
+      // Simulando detalhes dos produtos
+      const products = {
+        1: { 
+          title: "Produto 1", 
+          description: "Descrição completa do Produto 1", 
+          image: "Assets/imaTwo.png",  // Caminho da imagem do produto
+          whatsapp: "https://wa.me/5511999999999?text=Quero%20comprar%20o%20Produto%201" 
+        },
+        2: { 
+          title: "Produto 2", 
+          description: "Descrição completa do Produto 2", 
+          image: "Assets/imaOne.jpg",  // Caminho da imagem do produto
+          whatsapp: "https://wa.me/5511999999999?text=Quero%20comprar%20o%20Produto%202" 
+        },
+        3: { 
+          title: "Produto 3", 
+          description: "Descrição completa do Produto 3", 
+          image: "Assets/capThree.jpeg",  // Caminho da imagem do produto
+          whatsapp: "https://wa.me/5511999999999?text=Quero%20comprar%20o%20Produto%202" 
+        },
+        4: { 
+          title: "Produto 4", 
+          description: "Descrição completa do Produto 4", 
+          image: "Assets/capOne.jpg",  // Caminho da imagem do produto
+          whatsapp: "https://wa.me/5511999999999?text=Quero%20comprar%20o%20Produto%202" 
+        },
+        5: { 
+          title: "Produto 5", 
+          description: "Descrição completa do Produto 5", 
+          image: "Assets/capTwo.jpg",  // Caminho da imagem do produto
+          whatsapp: "https://wa.me/5511999999999?text=Quero%20comprar%20o%20Produto%202" 
+        },
+        6: { 
+          title: "Produto 6", 
+          description: "Descrição completa do Produto 6", 
+          image: "Assets/imaThree.jpg",  // Caminho da imagem do produto
+          whatsapp: "https://wa.me/5511999999999?text=Quero%20comprar%20o%20Produto%202" 
+        },
+        7: { 
+          title: "Produto 7", 
+          description: "Descrição completa do Produto 7", 
+          image: "Assets/imaThree.jpg",  // Caminho da imagem do produto
+          whatsapp: "https://wa.me/5511999999999?text=Quero%20comprar%20o%20Produto%202" 
+        },
+        
+      };
+
+      const product = products[productId];
+
+      if (product) {
+        document.getElementById('product-title').innerText = product.title;
+        document.getElementById('product-description').innerText = product.description;
+        document.getElementById('product-image').src = product.image;  // Define a imagem do produto
+        document.getElementById('whatsapp-link').href = product.whatsapp;
+      } else {
+        document.getElementById('product-title').innerText = 'Produto não encontrado';
+      }
+    }
+
+    // Chama a função para mostrar os detalhes do produto quando a página carrega
+    showProductDetails();
+  </script>
+
+</body>
+</html>

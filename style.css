@@ -1,0 +1,185 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #searchBar {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  #userName {
+    margin-left: 20px;
+  }
+  
+  .slidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .slidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .slidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .slidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: none;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  /* Estilo de produto */
+  #product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+  
+  .product {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    width: 10%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .product:hover {
+    background-color: #ddd;
+  }
+  
+  .product-details {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    margin: 20px;
+  }
+  
+  .buy-button {
+    position: absolute;
+    display: block;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    top: 220px;
+    left: 1000px;
+  }
+  
+  .buy-button:hover {
+    background-color: darkgreen;
+  }
+
+  .name-lj{
+    position: relative;
+    top: 15px;
+    display: flex;
+  }
+  
+  .container{
+    gap: 10px;
+  }
+
+  .images-prod{
+    width: 150px;
+  }
+
+  #product-details {
+    display: flex; 
+    height: 100vh;          
+  }
+  
+  .prod {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    top: 120px;
+  }
+
+  .prod:hover{
+    background-color: #ddd;
+  }
+
+  .dtl-title{
+    position: absolute;
+    top: 120px;
+    left: 1000px;
+  }  
+
+  .dtl-desc{
+    position: absolute;
+    top: 160px;
+    left: 1000px;
+  }  
+
+  .header-right{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name-user{
+    position: absolute;
+    top: 25px;
+    right: 10px;
+  }
+
+  .search{
+    position: relative;
+    top: 30px;
+    right: -5px;
+  }
+
+  .psq-buttom{
+    position: relative;
+    max-width: 80px;
+    height: 30px;
+    right: 80px;
+  }
